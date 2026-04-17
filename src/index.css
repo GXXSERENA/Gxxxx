@@ -1,0 +1,48 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;900&family=Jacquarda+Bastarda+9&family=JetBrains+Mono:wght@400;700&family=Montserrat:wght@400;700;900&display=swap');
+
+@theme {
+  --font-display: "Montserrat", sans-serif;
+  --font-pixel: "Jacquarda Bastarda 9", serif;
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+
+  --color-brutal-black: #000000;
+  --color-brutal-white: #ffffff;
+  --color-accent-blue: #2563eb;
+}
+
+@layer base {
+  body {
+    @apply bg-brutal-white text-brutal-black font-sans overflow-x-hidden;
+  }
+
+  h1, h2, h3 {
+    @apply font-sans font-light uppercase leading-none tracking-tight;
+  }
+}
+
+@layer utilities {
+  .skew-10 {
+    transform: skewX(-10deg);
+  }
+  
+  .text-outline {
+    -webkit-text-stroke: 1px currentColor;
+    color: transparent;
+  }
+
+  .marquee-content {
+    display: flex;
+    animation: marquee 20s linear infinite;
+  }
+
+  .font-jacquarda {
+    font-family: "Jacquarda Bastarda 9", serif;
+  }
+
+  @keyframes marquee {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+}
