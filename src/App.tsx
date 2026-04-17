@@ -7,7 +7,7 @@ import { motion, useScroll, useTransform, AnimatePresence } from "motion/react";
 import * as React from "react";
 import { useRef, useState, useEffect, useMemo } from "react";
 import { ArrowUpRight, Github, Instagram, Linkedin, Mail, Menu, X, ArrowLeft } from "lucide-react";
-import { BrowserRouter as Router, Routes, Route, Link, useParams, useLocation } from "react-router-dom";
+import { HashRouter as Router, Routes, Route, Link, useParams, useLocation } from "react-router-dom";
 
 // --- Types ---
 
